@@ -40,6 +40,8 @@ p {
   margin-left: auto;
   margin-right: auto;
   width: 1120px;
+  padding-top: 44px;
+  padding-bottom: 80px;
 }
 
 .main-directions-title {
@@ -50,11 +52,15 @@ p {
   line-height: 1.3;
   text-align: center;
   color: #000000;
+  margin-bottom: 50px;
 }
 
 .main-directions-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 37px;
+  column-gap: 32px;
+
   list-style: none;
   padding-left: 0px;
 }
@@ -63,22 +69,6 @@ p {
   display: inline-block;
   width: 256px;
 }
-
-.main-directions-list-item:not(:nth-child(4n + 4)) {
-  margin-right: 32px;
-}
-
-.main-directions-list-item:not(:nth-child(n + 4)) {
-  margin-bottom: 37px;
-}
-
-/* .main-directions-list-item::before {
-  content: '';
-  display: block;
-  width: 84px;
-  height: 84px;
-  margin-bottom: 16px;
-} */
 
 .main-directions-list-item.item-1::before {
   content: '';
@@ -167,4 +157,73 @@ p {
   font-size: 16px;
   line-height: 1.3;
   color: #333333;
+}
+
+.photo-gallery {
+  padding: 44px 0 80px;
+}
+
+.photo-gallery-container {
+  width: 1120px;
+  margin: 0 auto;
+}
+.photo-gallery-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.photo-gallery-menu-link {
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.18;
+  text-decoration-line: underline;
+  color: #0050b2;
+  margin-right: 50px;
+}
+.photo-gallery-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 59px;
+}
+.photo-gallery-menu-list {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.photo-gallery-menu-list-item {
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.18;
+  text-decoration-line: underline;
+  color: #0050b2;
+  margin-right: 16px;
+}
+
+.photo-gallery-title {
+  font-family: PT Serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1.3;
+  color: #000000;
+}
+.photo-gallery-gallery-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.photo-gallery-menu-list-button {
+  width: 44px;
+  height: 44px;
+
+  border: 1px solid #0061d9;
+  box-sizing: border-box;
+  border-radius: 22px;
+  transform: rotate(-180deg);
 }
